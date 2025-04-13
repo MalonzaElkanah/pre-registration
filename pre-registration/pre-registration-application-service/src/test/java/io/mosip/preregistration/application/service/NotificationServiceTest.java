@@ -271,7 +271,9 @@ public class NotificationServiceTest {
 		try {
 			Mockito.when(notificationServiceUtil.createNotificationDetails(null, "fra", false)).thenReturn(mainReqDto);
 		} catch (RuntimeException | io.mosip.kernel.core.util.exception.JsonMappingException
-				| io.mosip.kernel.core.exception.IOException | JSONException | java.text.ParseException
+				| io.mosip.kernel.core.exception.IOException 
+				// | JSONException 
+				| java.text.ParseException
 				| io.mosip.kernel.core.util.exception.JsonParseException ex) {
 		} catch (com.fasterxml.jackson.core.JsonParseException
 				| com.fasterxml.jackson.databind.JsonMappingException ex) {
@@ -421,7 +423,9 @@ public class NotificationServiceTest {
 		try {
 			Mockito.when(notificationServiceUtil.createNotificationDetails(null, "fra", false)).thenReturn(mainReqDto);
 		} catch (RuntimeException | io.mosip.kernel.core.util.exception.JsonMappingException
-				| io.mosip.kernel.core.exception.IOException | JSONException | java.text.ParseException
+				| io.mosip.kernel.core.exception.IOException 
+				// | JSONException 
+				| java.text.ParseException
 				| io.mosip.kernel.core.util.exception.JsonParseException ex) {
 		} catch (com.fasterxml.jackson.core.JsonParseException
 				| com.fasterxml.jackson.databind.JsonMappingException ex) {
@@ -470,7 +474,9 @@ public class NotificationServiceTest {
 		try {
 			Mockito.when(notificationServiceUtil.createNotificationDetails(null, "fra", false)).thenReturn(mainReqDto);
 		} catch (RuntimeException | io.mosip.kernel.core.util.exception.JsonMappingException
-				| io.mosip.kernel.core.exception.IOException | JSONException | java.text.ParseException
+				| io.mosip.kernel.core.exception.IOException 
+				// | JSONException 
+				| java.text.ParseException
 				| io.mosip.kernel.core.util.exception.JsonParseException ex) {
 		} catch (com.fasterxml.jackson.core.JsonParseException
 				| com.fasterxml.jackson.databind.JsonMappingException ex) {
@@ -517,7 +523,9 @@ public class NotificationServiceTest {
 		try {
 			Mockito.when(notificationServiceUtil.createNotificationDetails(null, "fra", false)).thenReturn(mainReqDto);
 		} catch (RuntimeException | io.mosip.kernel.core.util.exception.JsonMappingException
-				| io.mosip.kernel.core.exception.IOException | JSONException | java.text.ParseException
+				| io.mosip.kernel.core.exception.IOException 
+				// | JSONException 
+				| java.text.ParseException
 				| io.mosip.kernel.core.util.exception.JsonParseException ex) {
 		} catch (com.fasterxml.jackson.core.JsonParseException
 				| com.fasterxml.jackson.databind.JsonMappingException ex) {
@@ -567,7 +575,9 @@ public class NotificationServiceTest {
 		try {
 			Mockito.when(notificationServiceUtil.createNotificationDetails(null, "fra", false)).thenReturn(mainReqDto);
 		} catch (RuntimeException | io.mosip.kernel.core.util.exception.JsonMappingException
-				| io.mosip.kernel.core.exception.IOException | JSONException | java.text.ParseException
+				| io.mosip.kernel.core.exception.IOException 
+				// | JSONException 
+				| java.text.ParseException
 				| io.mosip.kernel.core.util.exception.JsonParseException ex) {
 		} catch (com.fasterxml.jackson.core.JsonParseException
 				| com.fasterxml.jackson.databind.JsonMappingException ex) {
@@ -609,7 +619,9 @@ public class NotificationServiceTest {
 		try {
 			Mockito.when(notificationServiceUtil.createNotificationDetails(null, "fra", true)).thenReturn(mainReqDto);
 		} catch (RuntimeException | io.mosip.kernel.core.util.exception.JsonMappingException
-				| io.mosip.kernel.core.exception.IOException | JSONException | java.text.ParseException
+				| io.mosip.kernel.core.exception.IOException 
+				// | JSONException 
+				| java.text.ParseException
 				| io.mosip.kernel.core.util.exception.JsonParseException ex) {
 		} catch (com.fasterxml.jackson.core.JsonParseException
 				| com.fasterxml.jackson.databind.JsonMappingException ex) {
@@ -651,7 +663,9 @@ public class NotificationServiceTest {
 		try {
 			Mockito.when(notificationServiceUtil.createNotificationDetails(null, "fra", true)).thenReturn(mainReqDto);
 		} catch (RuntimeException | io.mosip.kernel.core.util.exception.JsonMappingException
-				| io.mosip.kernel.core.exception.IOException | JSONException | java.text.ParseException
+				| io.mosip.kernel.core.exception.IOException 
+				// | JSONException 
+				| java.text.ParseException
 				| io.mosip.kernel.core.util.exception.JsonParseException ex) {
 		} catch (com.fasterxml.jackson.core.JsonParseException
 				| com.fasterxml.jackson.databind.JsonMappingException ex) {
@@ -693,7 +707,9 @@ public class NotificationServiceTest {
 		try {
 			Mockito.when(notificationServiceUtil.createNotificationDetails(null, "fra", true)).thenReturn(mainReqDto);
 		} catch (RuntimeException | io.mosip.kernel.core.util.exception.JsonMappingException
-				| io.mosip.kernel.core.exception.IOException | JSONException | java.text.ParseException
+				| io.mosip.kernel.core.exception.IOException 
+				// | JSONException 
+				| java.text.ParseException
 				| io.mosip.kernel.core.util.exception.JsonParseException ex) {
 		} catch (com.fasterxml.jackson.core.JsonParseException
 				| com.fasterxml.jackson.databind.JsonMappingException ex) {

@@ -222,7 +222,8 @@ public class NotificationService {
 		} catch (RuntimeException | IOException | ParseException
 				| io.mosip.kernel.core.util.exception.JsonParseException
 				| io.mosip.kernel.core.util.exception.JsonMappingException | io.mosip.kernel.core.exception.IOException
-				| JSONException | java.text.ParseException ex) {
+				// | JSONException
+				| java.text.ParseException ex) {
 			log.error("sessionId", "idType", "id", ExceptionUtils.getStackTrace(ex));
 			log.error("sessionId", "idType", "id", "In notification service of sendNotification " + ex.getMessage());
 			new NotificationExceptionCatcher().handle(ex, response);
