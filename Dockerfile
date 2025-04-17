@@ -1,32 +1,34 @@
 #### Stage 1: Build the application
 FROM openjdk:11 as build
 
-# Set the current working directory inside the image
 WORKDIR /app
 
-# Copy project folders
-COPY pre-registration pre-registration
-COPY .github .github
-COPY .git .git
+# Copy only what you need for the build
+# Will copy the .git folder into the image — though better left out for security and size - It required by the maven pipeline.
+COPY pre-registration /app/pre-registration
+COPY .git /app/.git
+COPY .github /app/.github
 
 
 # Install Maven
 RUN apt-get update && apt-get install -y maven
-# RUN mvn -version
 
 WORKDIR /app/pre-registration
 
-RUN ls -la
+# Prepare dependencies (cache-friendly)
+RUN mvn dependency:go-offline -B
 
-# Run mvn clean install -Dgpg.skip=true
-# Run mvn clean install -Dgpg.skip=true -DskipTests=true
-
+# Build the application
 RUN mvn clean install -DskipTests=true -Dmaven.javadoc.skip=true -Dgpg.skip=true
 
-# Run java -Dspring.profiles.active=<profile> -Dspring.cloud.config.uri=<config-url> -Dspring.cloud.config.label=<config-label> -jar <jar-name>.jar
-# Run java -Dspring.profiles.active=<profile> -jar <jar-name>.jar
+#### Stage 2: Run the application
+FROM openjdk:11-jre
 
-WORKDIR /app/pre-registration/pre-registration-application-service
+WORKDIR /app
 
-RUN java -Dspring.profiles.active=default -jar target/pre-registration-application-service-1.2.0.1.jar
+# Copy the built JAR from the build stage
+COPY --from=build /app/pre-registration/pre-registration-application-service/target/pre-registration-application-service-1.2.0.1.jar app.jar
 
+EXPOSE 9090
+
+CMD ["java", "-Dspring.profiles.active=default", "-Dspring.cloud.config.uri=http://config-server:8888", "-jar", "app.jar"]
